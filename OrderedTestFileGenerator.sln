@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderedTestFileGenerator", "OrderedTestFileGenerator\OrderedTestFileGenerator.csproj", "{C54E176F-E7D6-4216-818A-04EB40FD74C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderedTestFileGeneratorTests", "OrderedTestFileGeneratorTests\OrderedTestFileGeneratorTests.csproj", "{DBD13439-DFDC-4954-A640-46703DF7E1CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C54E176F-E7D6-4216-818A-04EB40FD74C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54E176F-E7D6-4216-818A-04EB40FD74C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54E176F-E7D6-4216-818A-04EB40FD74C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54E176F-E7D6-4216-818A-04EB40FD74C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBD13439-DFDC-4954-A640-46703DF7E1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD13439-DFDC-4954-A640-46703DF7E1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD13439-DFDC-4954-A640-46703DF7E1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBD13439-DFDC-4954-A640-46703DF7E1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
