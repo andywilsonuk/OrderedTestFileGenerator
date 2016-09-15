@@ -40,7 +40,8 @@ namespace OrderedTestFileGenerator
                 select new XElement(testNamespace + "TestLink",
                     new XAttribute("id", testDefinition.Id),
                     new XAttribute("name", testDefinition.MethodName),
-                    new XAttribute("storage", testDefinition.AssemblyFile.FullName)
+                    new XAttribute("storage", testDefinition.AssemblyFile.FullName),
+                    new XAttribute("type", "Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")
                 ))));
             return outputXml;
         }

@@ -23,7 +23,7 @@ namespace OrderedTestFileGeneratorTests
             var expected = XDocument.Parse(
 @"<OrderedTest name=""output"" storage=""c:\output.xml"" id=""" + target.Id + @""" xmlns=""http://microsoft.com/schemas/VisualStudio/TeamTest/2010"">
   <TestLinks>
-    <TestLink id=""2ff92d50-acfb-8f87-aa28-25baf0e02457"" name=""Test1"" storage=""c:\tests.dll"" />
+    <TestLink id=""2ff92d50-acfb-8f87-aa28-25baf0e02457"" name=""Test1"" storage=""c:\tests.dll"" type=""Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"" />
   </TestLinks>
 </OrderedTest>");
 

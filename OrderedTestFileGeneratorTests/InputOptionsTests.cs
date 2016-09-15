@@ -97,15 +97,21 @@ namespace OrderedTestFileGeneratorTests
         public void GetHelp_HelpText_ExpectedHelpString()
         {
             string expected =
-@"Usage:
--a  The file paths to the assembly DLLs containing the mstests. Required.
--o  The file path be to used for the generated Ordered Test file. Required.
-Categories (at least one must be specified):
--c  The sequence of categories for ordered tests (semi-colon separated).
--x  The file path of a linebreak separated list of categories.
+@"Usage
+  -a  The file paths to the assembly DLLs containing the mstests. Required.
+  -o  The file path be to used for the generated Ordered Test file. Required.
 
--p  Specify to append tests which don't match any of the specified categories to the end of the ordered test file.
+  Categories (at least one must be specified):
+  -c  The sequence of categories for ordered tests (semi-colon separated).
+  -x  The file path of a linebreak separated list of categories.
 
+  Optional:
+  -p  Specify to append tests which don't match any of the specified 
+      categories to the end of the ordered test file.
+
+Examples
+1.  OrderedTestFileGenerator.exe -a ""C:\TestAssembly.dll"" -o ""C:\all.orderedtest"" -c Smoke;Critical -p
+2.  OrderedTestFileGenerator.exe -a ""C:\TestAssembly.dll"" -a ""C:\TestAssembly2.dll"" -o ""C:\all.orderedtest"" -x ""C:\categories.txt""
 ";
             var target = new InputOptions();
 
@@ -288,20 +294,6 @@ Categories (at least one must be specified):
             var target = new InputOptions
             {
                 OutputFilePathRaw = null,
-            };
-
-            bool actual = target.IsValidOutputFilePath;
-
-            Assert.IsFalse(actual);
-        }
-
-        [TestMethod]
-        public void IsValidOutputFilePath_InvalidPathNotExist_False()
-        {
-            string testFilePath = TestFilePath();
-            var target = new InputOptions
-            {
-                OutputFilePathRaw = @"c:\test.orderedtest",
             };
 
             bool actual = target.IsValidOutputFilePath;

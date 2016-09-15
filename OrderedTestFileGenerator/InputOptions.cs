@@ -47,16 +47,22 @@ namespace OrderedTestFileGenerator
         public string GetHelp()
         {
             return new StringBuilder()
-                .AppendLine("Usage:")
-                .AppendLine("-a  The file paths to the assembly DLLs containing the mstests. Required.")
-                .AppendLine("-o  The file path be to used for the generated Ordered Test file. Required.")
-                .AppendLine("Categories (at least one must be specified):")
-                .AppendLine("-c  The sequence of categories for ordered tests (semi-colon separated).")
-                .AppendLine("-x  The file path of a linebreak separated list of categories.")
+                .AppendLine("Usage")
+                .AppendLine("  -a  The file paths to the assembly DLLs containing the mstests. Required.")
+                .AppendLine("  -o  The file path be to used for the generated Ordered Test file. Required.")
                 .AppendLine()
-                .AppendLine("-p  Specify to append tests which don't match any of the specified categories to the end of the ordered test file.")
+                .AppendLine("  Categories (at least one must be specified):")
+                .AppendLine("  -c  The sequence of categories for ordered tests (semi-colon separated).")
+                .AppendLine("  -x  The file path of a linebreak separated list of categories.")
                 .AppendLine()
-                
+                .AppendLine("  Optional:")
+                .AppendLine(
+@"  -p  Specify to append tests which don't match any of the specified 
+      categories to the end of the ordered test file.")
+                .AppendLine()
+                .AppendLine("Examples")
+                .AppendLine(@"1.  OrderedTestFileGenerator.exe -a ""C:\TestAssembly.dll"" -o ""C:\all.orderedtest"" -c Smoke;Critical -p")
+                .AppendLine(@"2.  OrderedTestFileGenerator.exe -a ""C:\TestAssembly.dll"" -a ""C:\TestAssembly2.dll"" -o ""C:\all.orderedtest"" -x ""C:\categories.txt""")
                 .ToString();
         }
 
@@ -91,7 +97,7 @@ namespace OrderedTestFileGenerator
 
         internal bool IsValidOutputFilePath
         {
-            get { return OutputFilePath != null && OutputFilePath.Exists; }
+            get { return OutputFilePath != null; }
         }
 
         internal bool IsValidCategoryFilePath
