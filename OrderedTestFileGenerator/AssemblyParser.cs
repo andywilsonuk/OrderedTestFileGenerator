@@ -10,14 +10,13 @@ namespace OrderedTestFileGenerator
     {
         public IEnumerable<TestDefinition> AllTests(FileSystemInfo assemblyToParse)
         {
-            Assembly assembly = Assembly.LoadFile(assemblyToParse.FullName);
+            Assembly assembly = Assembly.LoadFrom(assemblyToParse.FullName);
             return AllTests(assembly);
         }
 
         public IEnumerable<TestDefinition> AllTests(Assembly assemblyToParse)
         {
             FileSystemInfo assemblyPath = assemblyToParse.FilePath();
-
             return from methodInfo in assemblyToParse.AllTestMethods()
                    where !methodInfo.IsIgnored()
                    select new TestDefinition
