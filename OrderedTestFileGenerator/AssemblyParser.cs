@@ -8,24 +8,20 @@ namespace OrderedTestFileGenerator
 {
     class AssemblyParser
     {
-        public IEnumerable<TestDefinition> AllTests(FileSystemInfo assemblyToParse)
+        public IEnumerable<TestDefinition> AllTests(FileInfo assemblyToParse)
         {
             Assembly assembly = Assembly.LoadFrom(assemblyToParse.FullName);
-            return AllTests(assembly);
+            return All2015Tests(assembly).Concat(All2017Tests(assembly));
         }
 
-        public IEnumerable<TestDefinition> AllTests(Assembly assemblyToParse)
+        public IEnumerable<TestDefinition> All2015Tests(Assembly assembly)
         {
-            FileSystemInfo assemblyPath = assemblyToParse.FilePath();
-            return from methodInfo in assemblyToParse.AllTestMethods()
-                   where !methodInfo.IsIgnored()
-                   select new TestDefinition
-                   {
-                       QualifiedName = methodInfo.QualifiedName(),
-                       MethodName = methodInfo.Name,
-                       Categories = methodInfo.Categories(),
-                       AssemblyFile = assemblyPath,
-                   };
+            return new TestAssembly2015().AllTests(assembly);
+        }
+
+        public IEnumerable<TestDefinition> All2017Tests(Assembly assembly)
+        {
+            return new TestAssembly2017().AllTests(assembly);
         }
     }
 }

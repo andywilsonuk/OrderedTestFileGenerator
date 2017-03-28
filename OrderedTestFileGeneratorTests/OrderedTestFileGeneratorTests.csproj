@@ -58,7 +58,6 @@
     <Compile Include="AssemblyParserTests.cs" />
     <Compile Include="CategoryParserTests.cs" />
     <Compile Include="OrderedTestFileTests.cs" />
-    <Compile Include="AssemblyExtensionsTests.cs" />
     <Compile Include="InputOptionsTests.cs" />
     <Compile Include="TestDefinitionCategorySequencerTests.cs" />
   </ItemGroup>

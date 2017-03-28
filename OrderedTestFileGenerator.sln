@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderedTestFileGenerator", "OrderedTestFileGenerator\OrderedTestFileGenerator.csproj", "{C54E176F-E7D6-4216-818A-04EB40FD74C1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderedTestFileGeneratorTests", "OrderedTestFileGeneratorTests\OrderedTestFileGeneratorTests.csproj", "{DBD13439-DFDC-4954-A640-46703DF7E1CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{47B994C0-3DAB-48EC-9F73-B2952905A7C5}"
+	ProjectSection(SolutionItems) = preProject
+		Dependencies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll = Dependencies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+		Dependencies\Microsoft.VisualStudio.TestPlatform.TestFramework.dll = Dependencies\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

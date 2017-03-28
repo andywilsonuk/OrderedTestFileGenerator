@@ -13,6 +13,7 @@ namespace OrderedTestFileGenerator
         public string QualifiedName { get; set; }
         public IEnumerable<string> Categories { get; set; }
         public FileSystemInfo AssemblyFile { get; set; }
+        public string AssemblyBinding { get; set; }
 
         public Guid Id
         {

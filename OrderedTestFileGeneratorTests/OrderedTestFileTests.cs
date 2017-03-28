@@ -18,6 +18,7 @@ namespace OrderedTestFileGeneratorTests
                 Categories = new [] { "Smoke" },
                 MethodName = "Test1",
                 QualifiedName = "Tests.Tests1",
+                AssemblyBinding = "Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
             } };
             var target = new OrderedTestFile(new FileInfo(@"c:\output.xml"));
             var expected = XDocument.Parse(

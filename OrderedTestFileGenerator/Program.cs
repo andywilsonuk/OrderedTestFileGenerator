@@ -9,7 +9,7 @@ namespace OrderedTestFileGenerator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ordered Test file generator 1.0");
+            Console.WriteLine("Ordered Test file generator 1.2");
             Console.WriteLine("Website: github.com/andywilsonuk/OrderedTestFileGenerator");
             Console.WriteLine();
             InputOptions settings = ParseArguments(args);
